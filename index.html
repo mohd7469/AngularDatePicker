@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Dialog with Date Picker</title>
+
+    <link rel='stylesheet prefetch' href='bootstrap/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='bootstrap/dialogs.min.css'>
+
+
+    <script>
+        window.console = window.console || function (t) {
+        };
+    </script>
+
+
+</head>
+
+<body translate="no">
+
+<div class="container" ng-app="modalTest" ng-controller="dialogTestCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Dialog Custom Service with Date Picker</h1>
+
+            <p>
+                Date Picker directive with Angular-UI-Bootstrap.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" ng-click="launch()">Launch Custom Dialog</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br/>
+
+            <p>Date Picked: <span class="text-info">{{data.dt | date:'fullDate' }}</span></p>
+        </div>
+    </div>
+</div>
+
+<!--libraries-->
+<script src="bootstrap/stopExecutionOnTimeout.js"></script>
+<script src='bootstrap/jquery.min.js'></script>
+<script src='bootstrap/angular.min.js'></script>
+<script src='bootstrap/bootstrap.min.js'></script>
+<script src='bootstrap/angular-sanitize.min.js'></script>
+<script src='bootstrap/angular-translate.min.js'></script>
+<script src='bootstrap/ui-bootstrap.min.js'></script>
+<script src='bootstrap/dialogs.min.js'></script>
+<!--my custom javascript file-->
+<script src="main.js"></script>
+
+
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
